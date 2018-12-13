@@ -14,7 +14,7 @@ readme.close()
 setup(
     name='twnews',
     version=common.VERSION,
-    description='To tear down news web pages in Taiwan.',
+    description='第一次拆中國台北新聞就上手',
     long_description=longdesc,
     packages=find_packages(),
     url='https://github.com/virus-warnning/twnews',
