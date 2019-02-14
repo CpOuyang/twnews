@@ -53,7 +53,9 @@ def url_follow_redirection(url, proxy_first):
             status = resp.status_code
             if status // 100 == 3:
                 dest = resp.headers['Location']
-                if dest.startswith('/'):
+                if dest.startswith('//'):
+                    new_url = 'https:' + dest
+                elif dest.startswith('/'):
                     new_url = old_url[0:old_url.find('/', 10)] + dest
                 else:
                     new_url = dest
